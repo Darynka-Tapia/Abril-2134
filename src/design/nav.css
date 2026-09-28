@@ -1,0 +1,69 @@
+.nav-header {
+  height: 64px;
+  padding: 0 32px;
+  background-color: var(--bg-secondary);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo + nombre */
+.nav-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-header .logo-navbar {
+  width: 34px;
+  height: 34px;
+}
+
+.nav-header > div span {
+  color: var(--accent-hover);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navegación */
+.nav-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-header nav > span {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Cerrar sesión */
+.nav-header nav a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--accent-hover);
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: opacity 0.2s ease;
+}
+
+.nav-header nav a:hover {
+  opacity: 0.75;
+}
+
+/* Icono logout */
+.nav-header nav a img {
+  width: 18px;
+  height: 18px;
+
+  transition: filter 0.2s ease;
+}
