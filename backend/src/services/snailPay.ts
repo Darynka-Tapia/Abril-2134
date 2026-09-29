@@ -40,7 +40,7 @@ export const snailPay = (
   const id = "001";
   const reference = `SP-${Date.now()}`;
   const dateCreated = new Date().toISOString();
-  console.log('--',currentBalance)
+  
   const newBalance = currentBalance + amount;
   // Simulación de error del sistema
   if (cardNumber === "9999999999999999") {
