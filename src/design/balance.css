@@ -1,0 +1,123 @@
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.balance-card-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 12px;
+  & img{
+    width: 18px;
+    height: 18px;
+  }
+  & span {
+    font-family: var(--heading);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: var(--text-h);
+    font-style: normal;
+  }
+}
+
+.balance-card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  & .balance-card-title {
+    font-family: var(--heading);
+    font-size: 14px;
+    color: var(--text);
+    font-style: normal;
+    line-height: 118%;
+    letter-spacing: -0.24px;
+  }
+  & .balance-card-value-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    & .balance-card-value {
+      font-family: var(--heading);
+      font-size: 48px;
+      color: var(--accent);
+      font-style: normal;
+      line-height: 118%;
+      letter-spacing: -0.24px;
+    }
+    & .balance-card-currency {
+      font-family: var(--heading);
+      font-size: 12px;
+      color: var(--text);
+      font-style: normal;
+      line-height: 118%;
+      letter-spacing: -0.24px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.balance-card-buttons-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-direction: column;
+}
+.balance-card-button--primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 48px;
+  border: none;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}
+
+.balance-card-button--secondary {
+  padding: 12px;
+  border-radius: 48px;
+  background-color: var(--bg);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid transparent;
+  &:hover {
+    opacity: 0.8;
+  }
+  & .balance-card-button-text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--accent-secondary);
+  }
+  & .balance-card-button-description{
+    font-family: var(--heading);
+    font-size: 12px;
+    color: var(--text);
+    font-style: normal;
+    line-height: 118%;
+    letter-spacing: -0.24px;
+    & b {
+      font-weight: 600;
+      color: var(--accent-secondary);
+    }
+  }
+}
