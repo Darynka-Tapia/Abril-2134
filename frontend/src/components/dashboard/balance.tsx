@@ -8,6 +8,8 @@ import { useState } from "react";
 
 const BalanceCard = () => {
   const [isBalanceModalOpen, setIsBalanceModalOpen] = useState(false);
+  const balance = Number(localStorage.getItem("balance") || 0.00);
+
   return (
     <Card>
       <div className="balance-container">
@@ -18,7 +20,7 @@ const BalanceCard = () => {
         <div className="balance-card-body">
           <span className="balance-card-title">Saldo disponible</span>
           <div className="balance-card-value-container">
-            <span className="balance-card-value">$0.00</span>
+            <span className="balance-card-value">${balance.toFixed(2)}</span>
             <span className="balance-card-currency">SnailCoin</span>
           </div>          
         </div>

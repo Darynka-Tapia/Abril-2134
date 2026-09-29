@@ -194,3 +194,10 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.balance-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
