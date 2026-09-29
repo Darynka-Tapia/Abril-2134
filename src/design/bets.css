@@ -1,0 +1,110 @@
+.bets-container{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.bets-header{
+  display: flex;
+  justify-content: space-between;
+  & .bets-label {
+    font-family: var(--heading);
+    font-size: 24px;
+    color: var(--accent);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  & .bets-resume-container{
+    border: solid 1px var(--accent);
+    border-radius: 18px;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    & .bets-resume-value{
+      font-size: 12px;
+    }
+    & .bets-card-icon{
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.bets-body {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+
+.bets-chart-details{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.bet-item-detail{
+  background-color: var(--bg);
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+  & .color{
+    width: 12px;
+    height: 100%;
+  }
+  & .bet-item-titles-container{
+    display: flex;
+    flex-direction: column;
+    & .item-title{
+      font-family: var(--heading);
+      color: var(--text-h);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 22px;
+    }
+    & .item-percent{
+      font-family: var(--heading);
+      color: var(--text);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 14px;
+    }
+  }
+  & .item-num-container{
+    display: flex;
+    flex-direction: column;
+      margin-left: auto;
+
+
+    & .item-num {
+      font-family: var(--heading);
+      color: var(--text-h);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 40px;
+    }
+
+    & .item-num-title{
+      
+      font-family: var(--heading);
+      color: var(--text-h);
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+    }
+  }
+}
+
+.bet-item-detail:first-child {& .color{background-color: #47f3bb;}}
+.bet-item-detail:last-child {& .color{background-color: #f98400;}}
+.bet-item-detail:first-child .item-num-container {& .item-num {color: #47f3bb;}}
+.bet-item-detail:last-child .item-num-container {& .item-num {color: #f98400;}}

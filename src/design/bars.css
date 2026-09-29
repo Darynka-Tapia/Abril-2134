@@ -1,0 +1,33 @@
+.bar-container{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.bar-header{
+  display: flex;
+  justify-content: space-between;
+  & .bar-label {
+    font-family: var(--heading);
+    font-size: 24px;
+    color: var(--accent);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  & .bar-resume-container{
+    border: solid 1px var(--accent);
+    border-radius: 18px;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    & .bar-resume-value{
+      font-size: 12px;
+    }
+    & .bar-card-icon{
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

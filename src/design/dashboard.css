@@ -2,13 +2,26 @@
   padding: 20px;
   min-height: 100vh;
 }
+.cards-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+
+  grid-template-areas:
+    "balance bets bets"
+    ". ranking ranking";
+}
+.balance { grid-area: balance; }
+.bets { grid-area: bets; }
+.ranking { grid-area: ranking; }
 
 .dashboard-title{
   text-align: left;
 }
 
 .dashboard-card {
-  width: fit-content;
+  width: auto;
   min-width: 300px;
   background: var(--bg-secondary);
   border-radius: 16px;
