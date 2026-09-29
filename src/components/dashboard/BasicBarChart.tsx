@@ -45,7 +45,7 @@ export default function ShinyBarChartHorizontal() {
             id: 'victories',
             dataKey: 'victories',
             stack: 'voter victories',
-            valueFormatter: (value: number | null) => `${value}%`,
+            valueFormatter: (value: number | null) => `${value}`,
             barLabel: (v) => `${v.value}%`,
           },
         ]}

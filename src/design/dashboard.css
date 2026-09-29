@@ -11,6 +11,18 @@
   grid-template-areas:
     "balance bets bets"
     ". ranking ranking";
+  @media (max-width: 974px) {
+    margin: 0 auto;
+    max-width: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+
+    grid-template-areas:
+      "balance"
+      "bets"
+      "ranking";
+  }
 }
 .balance { grid-area: balance; }
 .bets { grid-area: bets; }

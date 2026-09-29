@@ -3,8 +3,11 @@ import "../../design/balance.css";
 import WalletIcon from "../../assets/icons/account_balance_wallet.svg";
 import AddIcon from "../../assets/icons/add.svg";
 import RaceIcon from "../../assets/icons/sports_score.svg";
+import AddBalanceModal from "./AddBalanceModal";
+import { useState } from "react";
 
 const BalanceCard = () => {
+  const [isBalanceModalOpen, setIsBalanceModalOpen] = useState(false);
   return (
     <Card>
       <div className="balance-container">
@@ -15,7 +18,7 @@ const BalanceCard = () => {
         <div className="balance-card-body">
           <span className="balance-card-title">Saldo disponible</span>
           <div className="balance-card-value-container">
-            <span className="balance-card-value">$1,234.56</span>
+            <span className="balance-card-value">$0.00</span>
             <span className="balance-card-currency">SnailCoin</span>
           </div>          
         </div>
@@ -24,16 +27,20 @@ const BalanceCard = () => {
             <img src={RaceIcon} alt="Race Icon" className="balance-card-button-icon" />
             <span>Elegir Caracol</span>
             </button>
-          <div className="balance-card-button--secondary">
+          <button className="balance-card-button--secondary"  onClick={() => setIsBalanceModalOpen(true)}>
             <div className="balance-card-button-text-container">
               <img src={AddIcon} alt="Wallet Icon" className="balance-card-button-icon" />
               <span>Cargar saldo</span>
             </div>
             <span className="balance-card-button-description">Vía pasarela segura <b>SnailPay</b></span>
-          </div>
+          </button>
         </div>
         
       </div>
+      <AddBalanceModal
+        isOpen={isBalanceModalOpen}
+        onClose={() => setIsBalanceModalOpen(false)}
+      />
     </Card>
   );
 };

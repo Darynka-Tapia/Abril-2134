@@ -1,0 +1,196 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.balance-modal {
+  width: min(420px, calc(100% - 32px));
+  padding: 24px;
+
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+  color: #ffffff;
+}
+
+.balance-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.balance-modal-label {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #8f9bb3;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.balance-modal-header h2 {
+  margin: 4px 0 0;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.balance-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #8f9bb3;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.balance-modal-close:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.balance-modal-content {
+  margin-top: 28px;
+}
+
+.balance-modal-content label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  color: #c4cad6;
+}
+
+.balance-input-container {
+  display: flex;
+  align-items: center;
+
+  padding: 0 14px;
+
+  background: #0b1326;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  transition: border-color 0.2s ease;
+}
+
+.balance-input-container:focus-within {
+  border-color: var(--accent);
+}
+
+.balance-input-container span {
+  color: #8f9bb3;
+  font-size: 18px;
+}
+
+.balance-input-container input {
+  width: 100%;
+
+  padding: 14px 8px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.balance-input-container input::placeholder {
+  color: #59647a;
+}
+
+/* Remove arrows from number input */
+
+.balance-input-container input::-webkit-outer-spin-button,
+.balance-input-container input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.balance-input-container input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.balance-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.balance-modal-button {
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.balance-modal-button.secondary {
+  background: transparent;
+  color: #aeb6c6;
+}
+
+.balance-modal-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.balance-modal-button.primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.balance-modal-button.primary:hover {
+  filter: brightness(1.08);
+}
+
+.balance-modal-button.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

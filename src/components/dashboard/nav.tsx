@@ -1,7 +1,7 @@
 import "./../../design/nav.css";
 import Logo from "./../../assets/snail-races-logo.png";
 import Logout from "./../../assets/icons/logout.svg";
-import { logoutUser } from "../../services/auth";
+import { getUserFromLocalStorage, logoutUser } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
 
 
@@ -14,6 +14,8 @@ function Nav() {
       navigate("/login");
     }
   }
+  const user = getUserFromLocalStorage();
+
   return (
     <header className="nav-header">
       <div>
@@ -21,7 +23,7 @@ function Nav() {
         <span>SNAIL RACES</span>
       </div>
       <nav>
-        <span>Abril Tapia</span>
+        <span>{ user?.name  }</span>
         <a onClick={handleLogout}>
           Cerrar sesión <img src={ Logout } alt="Logo" className="icon" />
         </a>
